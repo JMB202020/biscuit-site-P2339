@@ -1,0 +1,228 @@
+---
+import '../styles/site.css';
+const nav = [
+  { label: 'Home',     href: '/P2339' },
+  { label: 'Services', href: '/P2339/services' },
+  { label: 'Gallery',  href: '/P2339/gallery' },
+  { label: 'Contact',  href: '/P2339/contact' },
+];
+const phone = '01643 707182';
+const phoneHref = 'tel:+441643707182';
+const address = '13 Regents Way, Minehead';
+---
+
+<!doctype html>
+<html lang="en-GB">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Contact Us | The Iggy Haven, Minehead</title>
+    <meta name="robots" content="noindex, nofollow" />
+    <link rel="preload" href="/P2339/fonts/nunito-latin.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/P2339/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin />
+  </head>
+  <body class="bg-brand-bg">
+
+    <!-- Preview banner -->
+    <div class="bg-brand-accent text-white py-2.5 px-4 text-center text-sm sticky top-0 z-50">
+      <div class="max-w-4xl mx-auto flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-4">
+        <span>Preview redesign for <strong>The Iggy Haven</strong> by <strong>Biscuit Web</strong></span>
+        <a href="https://biscuitweb.co.uk/activate?id=P2339&name=The%20Iggy%20Haven" class="inline-flex items-center px-4 py-1 bg-white text-brand-accent font-bold text-xs rounded-full hover:opacity-80 transition-opacity shrink-0">
+          Like it? Just &pound;20/month
+        </a>
+      </div>
+    </div>
+
+    <!-- Nav -->
+    <header class="bg-white-warm border-b border-border sticky top-10 z-40">
+      <div class="mx-auto max-w-7xl px-6 py-4 flex items-center justify-between">
+        <a href="/P2339" class="font-display font-extrabold text-xl text-ink">The Iggy Haven</a>
+        <button class="md:hidden p-2 text-ink-soft" onclick="document.getElementById('mobile-nav-con').classList.toggle('hidden')" aria-label="Open menu">
+          <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+        </button>
+        <nav class="hidden md:flex items-center gap-6">
+          {nav.map(n => (
+            <a href={n.href} class={`text-sm font-semibold transition-colors ${n.href === '/P2339/contact' ? 'text-brand-accent' : 'text-ink-soft hover:text-brand-accent'}`}>{n.label}</a>
+          ))}
+          <a href={phoneHref} class="inline-flex items-center px-5 py-2 bg-brand-accent text-white font-display font-bold text-sm rounded hover:opacity-90 transition-opacity">{phone}</a>
+        </nav>
+      </div>
+      <nav id="mobile-nav-con" class="hidden md:hidden px-6 pb-4 space-y-3 border-t border-border pt-4">
+        {nav.map(n => (
+          <a href={n.href} class="text-ink-soft block text-sm font-semibold hover:text-brand-accent">{n.label}</a>
+        ))}
+        <a href={phoneHref} class="block px-5 py-2.5 bg-brand-accent text-white font-display font-bold text-sm rounded text-center hover:opacity-90 transition-opacity">{phone}</a>
+      </nav>
+    </header>
+
+    <!-- Page header -->
+    <section class="py-14 sm:py-20 bg-brand-hero">
+      <div class="mx-auto max-w-7xl px-6">
+        <p class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-sm font-semibold mb-5 bg-white/15 text-white border border-white/20">📍 Minehead</p>
+        <h1 class="font-display font-extrabold text-3xl sm:text-5xl lg:text-6xl text-white leading-tight max-w-2xl">Get in touch</h1>
+        <p class="mt-4 text-white/85 text-lg max-w-xl">Questions about boarding? We are always happy to chat. Give us a ring or drop us a message below.</p>
+      </div>
+    </section>
+
+    <!-- Contact details + form -->
+    <section class="bg-white py-16 sm:py-24">
+      <div class="mx-auto max-w-7xl px-6">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20">
+
+          <!-- Contact details -->
+          <div>
+            <h2 class="font-display font-extrabold text-2xl sm:text-3xl text-ink mb-8">Contact details</h2>
+
+            <div class="space-y-5">
+              <div class="flex items-start gap-4 p-5 bg-cream rounded-xl border border-border">
+                <span class="text-2xl mt-0.5" aria-hidden="true">📞</span>
+                <div>
+                  <p class="font-display font-bold text-ink text-sm uppercase tracking-wider mb-1">Phone</p>
+                  <a href={phoneHref} class="text-brand-accent font-semibold text-lg hover:underline">{phone}</a>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-4 p-5 bg-cream rounded-xl border border-border">
+                <span class="text-2xl mt-0.5" aria-hidden="true">📍</span>
+                <div>
+                  <p class="font-display font-bold text-ink text-sm uppercase tracking-wider mb-1">Address</p>
+                  <p class="text-ink-soft">{address}<br />Somerset</p>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-4 p-5 bg-cream rounded-xl border border-border">
+                <span class="text-2xl mt-0.5" aria-hidden="true">🕐</span>
+                <div>
+                  <p class="font-display font-bold text-ink text-sm uppercase tracking-wider mb-1">Opening hours</p>
+                  <div class="border-2 border-dashed border-border rounded-lg p-4 mt-1">
+                    <p class="text-ink-soft italic text-sm">Add your drop-off and collection hours here.</p>
+                    <p class="text-ink-whisper text-xs mt-1">We will add your hours when you get in touch.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Map -->
+            <div class="mt-8 rounded-2xl overflow-hidden border border-border shadow-sm">
+              <iframe
+                src="https://www.google.com/maps?q=13+Regents+Way,+Minehead&output=embed"
+                width="100%"
+                height="200"
+                style="border:0"
+                loading="lazy"
+                title="The Iggy Haven location map"
+              ></iframe>
+            </div>
+          </div>
+
+          <!-- Contact form -->
+          <div>
+            <h2 class="font-display font-extrabold text-2xl sm:text-3xl text-ink mb-8">Send a message</h2>
+            <form action="https://formspree.io/f/mwvaaojq" method="POST" class="space-y-5">
+              <input type="hidden" name="business_name" value="The Iggy Haven" />
+              <input type="hidden" name="site_id" value="P2339" />
+
+              <div>
+                <label for="name" class="block font-display font-bold text-sm text-ink mb-2">Your name</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  required
+                  placeholder="Your full name"
+                  class="w-full px-4 py-3 rounded-xl border border-border bg-cream text-ink placeholder:text-ink-whisper focus:outline-none focus:ring-2 focus:ring-brand-accent focus:border-brand-accent transition"
+                />
+              </div>
+
+              <div>
+                <label for="email" class="block font-display font-bold text-sm text-ink mb-2">Email address</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  required
+                  placeholder="you@example.com"
+                  class="w-full px-4 py-3 rounded-xl border border-border bg-cream text-ink placeholder:text-ink-whisper focus:outline-none focus:ring-2 focus:ring-brand-accent focus:border-brand-accent transition"
+                />
+              </div>
+
+              <div>
+                <label for="phone_number" class="block font-display font-bold text-sm text-ink mb-2">Phone number <span class="text-ink-whisper font-normal">(optional)</span></label>
+                <input
+                  type="tel"
+                  id="phone_number"
+                  name="phone_number"
+                  placeholder="07700 000 000"
+                  class="w-full px-4 py-3 rounded-xl border border-border bg-cream text-ink placeholder:text-ink-whisper focus:outline-none focus:ring-2 focus:ring-brand-accent focus:border-brand-accent transition"
+                />
+              </div>
+
+              <div>
+                <label for="pet_type" class="block font-display font-bold text-sm text-ink mb-2">What type of pet?</label>
+                <input
+                  type="text"
+                  id="pet_type"
+                  name="pet_type"
+                  placeholder="e.g. dog, cat, rabbit..."
+                  class="w-full px-4 py-3 rounded-xl border border-border bg-cream text-ink placeholder:text-ink-whisper focus:outline-none focus:ring-2 focus:ring-brand-accent focus:border-brand-accent transition"
+                />
+              </div>
+
+              <div>
+                <label for="message" class="block font-display font-bold text-sm text-ink mb-2">Your message</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  required
+                  rows="5"
+                  placeholder="Tell us about your pet and when you need boarding..."
+                  class="w-full px-4 py-3 rounded-xl border border-border bg-cream text-ink placeholder:text-ink-whisper focus:outline-none focus:ring-2 focus:ring-brand-accent focus:border-brand-accent transition resize-none"
+                ></textarea>
+              </div>
+
+              <button
+                type="submit"
+                class="w-full px-6 py-4 bg-brand-accent text-white font-display font-bold text-base rounded-xl hover:bg-brand-accent-deep transition-all shadow-md"
+              >
+                Send message
+              </button>
+
+              <p class="text-ink-whisper text-xs text-center">We aim to get back to you within 24 hours.</p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-cream-dark border-t border-border py-12">
+      <div class="mx-auto max-w-7xl px-6">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+          <div>
+            <span class="font-display font-extrabold text-xl text-ink">The Iggy Haven</span>
+            <p class="text-ink-soft text-sm mt-3">Pet boarding in Minehead, Somerset. A safe, homely stay for your pets.</p>
+          </div>
+          <div>
+            <h4 class="font-display font-bold text-sm text-ink mb-4 uppercase tracking-wider">Pages</h4>
+            <ul class="space-y-2">
+              {nav.map(n => (
+                <li><a href={n.href} class="text-sm text-ink-soft hover:text-brand-accent transition-colors">{n.label}</a></li>
+              ))}
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-display font-bold text-sm text-ink mb-4 uppercase tracking-wider">Contact</h4>
+            <p class="text-sm text-ink-soft">
+              <a href={phoneHref} class="hover:text-brand-accent transition-colors">{phone}</a>
+            </p>
+            <p class="text-sm text-ink-soft mt-2">13 Regents Way<br />Minehead<br />Somerset</p>
+          </div>
+        </div>
+        <div class="mt-8 pt-6 border-t border-border">
+          <p class="text-ink-whisper text-xs">&copy; 2026 The Iggy Haven. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+  </body>
+</html>
