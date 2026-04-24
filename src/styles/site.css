@@ -16,16 +16,20 @@
 }
 
 @theme {
-  --color-brand-bg: #336699;
+  --color-brand-bg: #FAF2F2;
   --color-brand-accent: #990000;
   --color-brand-accent-deep: #7A0000;
-  --color-ink: #E8E4DE;
-  --color-ink-soft: rgba(255,255,255,0.6);
-  --color-border: rgba(255,255,255,0.1);
-  --color-cream: #3D6E9E;
+  --color-brand-hero: #336699;
+  --color-ink: #2E0000;
+  --color-ink-soft: #5C0000;
+  --color-ink-whisper: #9B7070;
+  --color-border: #E0B3B3;
+  --color-cream: #F7EBEB;
+  --color-cream-dark: #EED9D9;
   --color-accent-light: #F0D9D9;
   --color-brand-secondary: #336699;
   --color-white: #FFFFFF;
+  --color-white-warm: #FFFAF8;
 
   --font-display: 'Nunito', system-ui, sans-serif;
   --font-body: 'Inter', system-ui, sans-serif;

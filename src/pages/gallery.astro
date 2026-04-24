@@ -43,14 +43,14 @@ const phoneHref = 'tel:+441643707182';
           {nav.map(n => (
             <a href={n.href} class={`text-sm font-semibold transition-colors ${n.href === '/P2339/gallery' ? 'text-brand-accent' : 'text-ink-soft hover:text-brand-accent'}`}>{n.label}</a>
           ))}
-          <a href={phoneHref} class="inline-flex items-center px-5 py-2 bg-brand-accent text-white font-display font-bold text-sm rounded hover:opacity-90 transition-opacity">{phone}</a>
+          <a href={phoneHref} class="inline-flex items-center px-5 py-2 bg-brand-accent text-white font-display font-bold text-sm rounded hover:bg-brand-accent-deep transition-colors">{phone}</a>
         </nav>
       </div>
       <nav id="mobile-nav-gal" class="hidden md:hidden px-6 pb-4 space-y-3 border-t border-border pt-4">
         {nav.map(n => (
           <a href={n.href} class="text-ink-soft block text-sm font-semibold hover:text-brand-accent">{n.label}</a>
         ))}
-        <a href={phoneHref} class="block px-5 py-2.5 bg-brand-accent text-white font-display font-bold text-sm rounded text-center hover:opacity-90 transition-opacity">{phone}</a>
+        <a href={phoneHref} class="block px-5 py-2.5 bg-brand-accent text-white font-display font-bold text-sm rounded text-center hover:bg-brand-accent-deep transition-colors">{phone}</a>
       </nav>
     </header>
 
@@ -59,22 +59,54 @@ const phoneHref = 'tel:+441643707182';
       <div class="mx-auto max-w-7xl px-6">
         <p class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-sm font-semibold mb-5 bg-white/15 text-white border border-white/20">📍 Minehead</p>
         <h1 class="font-display font-extrabold text-3xl sm:text-5xl lg:text-6xl text-white leading-tight max-w-2xl">Our guests</h1>
-        <p class="mt-4 text-white/85 text-lg max-w-xl">Photos of the pets in our care at The Iggy Haven.</p>
+        <p class="mt-4 text-white/85 text-lg max-w-xl">Photos from The Iggy Haven.</p>
       </div>
     </section>
 
-    <!-- Gallery grid placeholder -->
+    <!-- Our dogs -->
     <section class="bg-white py-16 sm:py-24">
+      <div class="mx-auto max-w-7xl px-6">
+        <div class="text-center mb-10">
+          <h2 class="font-display font-extrabold text-3xl sm:text-4xl text-ink">Our Italian Greyhounds</h2>
+          <p class="mt-3 text-ink-soft text-lg">Our rescue Italian Greyhounds and Whippet make every guest feel welcome.</p>
+        </div>
+        <div class="flex justify-center gap-6">
+          <div class="aspect-square w-48 sm:w-64 overflow-hidden rounded-xl shadow-lg border border-border">
+            <img
+              src="/P2339/images/angleft.jpg"
+              alt="One of our rescue Italian Greyhounds at The Iggy Haven"
+              width="200"
+              height="200"
+              loading="lazy"
+              class="w-full h-full object-cover object-top"
+            />
+          </div>
+          <div class="aspect-square w-48 sm:w-64 overflow-hidden rounded-xl shadow-lg border border-border">
+            <img
+              src="/P2339/images/angelright.jpg"
+              alt="Another of our rescue Italian Greyhounds at The Iggy Haven"
+              width="200"
+              height="200"
+              loading="lazy"
+              class="w-full h-full object-cover object-top"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Guest photos placeholder -->
+    <section class="bg-cream py-16 sm:py-24">
       <div class="mx-auto max-w-7xl px-6">
         <div class="mb-10 border-2 border-dashed border-border rounded-2xl p-8 text-center bg-accent-light">
           <span class="text-4xl" aria-hidden="true">📸</span>
-          <p class="text-ink-soft italic mt-4 text-lg">Your photos of pets staying at The Iggy Haven will appear here. Share your favourite snaps with us and we will build out a lovely gallery to show prospective customers.</p>
+          <p class="text-ink-soft italic mt-4 text-lg">Photos of your guests staying at The Iggy Haven will appear here. Share your favourite snaps with us and we will build out a lovely gallery to show prospective customers.</p>
           <p class="text-ink-whisper text-sm mt-3">We will add your photos here when you get in touch.</p>
         </div>
 
-        <!-- Placeholder grid showing the layout -->
+        <!-- Layout preview -->
         <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-          {Array.from({ length: 12 }).map((_, i) => (
+          {Array.from({ length: 8 }).map((_, i) => (
             <div class="aspect-square rounded-xl overflow-hidden bg-cream-dark flex items-center justify-center border border-border">
               <div class="text-center p-4">
                 <span class="text-3xl" aria-hidden="true">🐾</span>
@@ -86,73 +118,43 @@ const phoneHref = 'tel:+441643707182';
       </div>
     </section>
 
-    <!-- Facilities photos placeholder -->
-    <section class="bg-cream py-16 sm:py-20">
-      <div class="mx-auto max-w-7xl px-6">
-        <div class="text-center mb-10">
-          <h2 class="font-display font-extrabold text-3xl sm:text-4xl text-ink">Our facilities</h2>
-          <p class="mt-3 text-ink-soft text-lg">A look around The Iggy Haven.</p>
-        </div>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {[
-            { icon: '🏠', label: 'Indoor boarding areas' },
-            { icon: '🌳', label: 'Outdoor exercise space' },
-            { icon: '🛏️', label: 'Sleeping quarters' },
-          ].map(f => (
-            <div class="rounded-2xl overflow-hidden border border-border bg-white shadow-sm">
-              <div class="aspect-square overflow-hidden bg-cream-dark flex items-center justify-center border-b border-border border-2 border-dashed m-4 rounded-xl">
-                <div class="text-center p-6">
-                  <span class="text-5xl" aria-hidden="true">{f.icon}</span>
-                  <p class="text-ink-whisper text-sm mt-3">Photo of {f.label.toLowerCase()}</p>
-                </div>
-              </div>
-              <div class="p-5">
-                <h3 class="font-display font-bold text-lg text-ink">{f.label}</h3>
-                <p class="text-ink-whisper text-sm mt-1 italic">Add a description here.</p>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-
     <!-- CTA -->
     <section class="py-14 sm:py-20 bg-brand-hero">
       <div class="mx-auto max-w-2xl px-6 text-center">
         <h2 class="font-display font-extrabold text-3xl sm:text-4xl text-white mb-4">Want to see the place in person?</h2>
-        <p class="text-white/85 text-lg mb-8">Give us a call to arrange a visit or ask any questions about our facilities.</p>
-        <a href={phoneHref} class="inline-flex items-center px-8 py-4 bg-brand-accent text-white font-display font-bold text-lg rounded-xl hover:bg-brand-accent-deep transition-all shadow-md">
+        <p class="text-white/85 text-lg mb-8">Give us a call to arrange a visit or ask any questions about our home.</p>
+        <a href={phoneHref} class="inline-flex items-center px-8 py-4 bg-brand-accent text-white font-display font-bold text-lg rounded-xl hover:bg-brand-accent-deep transition-colors shadow-md">
           📞 {phone}
         </a>
       </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-cream-dark border-t border-border py-12">
+    <footer class="bg-ink border-t border-black/20 py-12">
       <div class="mx-auto max-w-7xl px-6">
         <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
           <div>
-            <span class="font-display font-extrabold text-xl text-ink">The Iggy Haven</span>
-            <p class="text-ink-soft text-sm mt-3">Pet boarding in Minehead, Somerset. A safe, homely stay for your pets.</p>
+            <span class="font-display font-extrabold text-xl text-white">The Iggy Haven</span>
+            <p class="text-white/50 text-sm mt-3">Dog boarding in Minehead, Somerset. A safe, homely stay for your dog.</p>
           </div>
           <div>
-            <h4 class="font-display font-bold text-sm text-ink mb-4 uppercase tracking-wider">Pages</h4>
+            <h4 class="font-display font-bold text-sm text-white mb-4 uppercase tracking-wider">Pages</h4>
             <ul class="space-y-2">
               {nav.map(n => (
-                <li><a href={n.href} class="text-sm text-ink-soft hover:text-brand-accent transition-colors">{n.label}</a></li>
+                <li><a href={n.href} class="text-sm text-white/50 hover:text-white transition-colors">{n.label}</a></li>
               ))}
             </ul>
           </div>
           <div>
-            <h4 class="font-display font-bold text-sm text-ink mb-4 uppercase tracking-wider">Contact</h4>
-            <p class="text-sm text-ink-soft">
-              <a href={phoneHref} class="hover:text-brand-accent transition-colors">{phone}</a>
+            <h4 class="font-display font-bold text-sm text-white mb-4 uppercase tracking-wider">Contact</h4>
+            <p class="text-sm text-white/50">
+              <a href={phoneHref} class="hover:text-white transition-colors">{phone}</a>
             </p>
-            <p class="text-sm text-ink-soft mt-2">13 Regents Way<br />Minehead<br />Somerset</p>
+            <p class="text-sm text-white/50 mt-2">13 Regents Way<br />Minehead<br />Somerset</p>
           </div>
         </div>
-        <div class="mt-8 pt-6 border-t border-border">
-          <p class="text-ink-whisper text-xs">&copy; 2026 The Iggy Haven. All rights reserved.</p>
+        <div class="mt-8 pt-6 border-t border-white/10">
+          <p class="text-white/30 text-xs">&copy; 2026 The Iggy Haven. All rights reserved.</p>
         </div>
       </div>
     </footer>

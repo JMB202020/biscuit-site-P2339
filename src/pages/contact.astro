@@ -44,14 +44,14 @@ const address = '13 Regents Way, Minehead';
           {nav.map(n => (
             <a href={n.href} class={`text-sm font-semibold transition-colors ${n.href === '/P2339/contact' ? 'text-brand-accent' : 'text-ink-soft hover:text-brand-accent'}`}>{n.label}</a>
           ))}
-          <a href={phoneHref} class="inline-flex items-center px-5 py-2 bg-brand-accent text-white font-display font-bold text-sm rounded hover:opacity-90 transition-opacity">{phone}</a>
+          <a href={phoneHref} class="inline-flex items-center px-5 py-2 bg-brand-accent text-white font-display font-bold text-sm rounded hover:bg-brand-accent-deep transition-colors">{phone}</a>
         </nav>
       </div>
       <nav id="mobile-nav-con" class="hidden md:hidden px-6 pb-4 space-y-3 border-t border-border pt-4">
         {nav.map(n => (
           <a href={n.href} class="text-ink-soft block text-sm font-semibold hover:text-brand-accent">{n.label}</a>
         ))}
-        <a href={phoneHref} class="block px-5 py-2.5 bg-brand-accent text-white font-display font-bold text-sm rounded text-center hover:opacity-90 transition-opacity">{phone}</a>
+        <a href={phoneHref} class="block px-5 py-2.5 bg-brand-accent text-white font-display font-bold text-sm rounded text-center hover:bg-brand-accent-deep transition-colors">{phone}</a>
       </nav>
     </header>
 
@@ -93,11 +93,8 @@ const address = '13 Regents Way, Minehead';
               <div class="flex items-start gap-4 p-5 bg-cream rounded-xl border border-border">
                 <span class="text-2xl mt-0.5" aria-hidden="true">🕐</span>
                 <div>
-                  <p class="font-display font-bold text-ink text-sm uppercase tracking-wider mb-1">Opening hours</p>
-                  <div class="border-2 border-dashed border-border rounded-lg p-4 mt-1">
-                    <p class="text-ink-soft italic text-sm">Add your drop-off and collection hours here.</p>
-                    <p class="text-ink-whisper text-xs mt-1">We will add your hours when you get in touch.</p>
-                  </div>
+                  <p class="font-display font-bold text-ink text-sm uppercase tracking-wider mb-1">Availability</p>
+                  <p class="text-ink-soft text-sm">We board up to 4 small and medium sized dogs at a time. Get in touch to check availability for your dates.</p>
                 </div>
               </div>
             </div>
@@ -158,12 +155,12 @@ const address = '13 Regents Way, Minehead';
               </div>
 
               <div>
-                <label for="pet_type" class="block font-display font-bold text-sm text-ink mb-2">What type of pet?</label>
+                <label for="dog_details" class="block font-display font-bold text-sm text-ink mb-2">About your dog</label>
                 <input
                   type="text"
-                  id="pet_type"
-                  name="pet_type"
-                  placeholder="e.g. dog, cat, rabbit..."
+                  id="dog_details"
+                  name="dog_details"
+                  placeholder="e.g. Border Collie, 3 years old..."
                   class="w-full px-4 py-3 rounded-xl border border-border bg-cream text-ink placeholder:text-ink-whisper focus:outline-none focus:ring-2 focus:ring-brand-accent focus:border-brand-accent transition"
                 />
               </div>
@@ -175,14 +172,14 @@ const address = '13 Regents Way, Minehead';
                   name="message"
                   required
                   rows="5"
-                  placeholder="Tell us about your pet and when you need boarding..."
+                  placeholder="Tell us your dates and anything else we should know..."
                   class="w-full px-4 py-3 rounded-xl border border-border bg-cream text-ink placeholder:text-ink-whisper focus:outline-none focus:ring-2 focus:ring-brand-accent focus:border-brand-accent transition resize-none"
                 ></textarea>
               </div>
 
               <button
                 type="submit"
-                class="w-full px-6 py-4 bg-brand-accent text-white font-display font-bold text-base rounded-xl hover:bg-brand-accent-deep transition-all shadow-md"
+                class="w-full px-6 py-4 bg-brand-accent text-white font-display font-bold text-base rounded-xl hover:bg-brand-accent-deep transition-colors shadow-md"
               >
                 Send message
               </button>
@@ -195,31 +192,31 @@ const address = '13 Regents Way, Minehead';
     </section>
 
     <!-- Footer -->
-    <footer class="bg-cream-dark border-t border-border py-12">
+    <footer class="bg-ink border-t border-black/20 py-12">
       <div class="mx-auto max-w-7xl px-6">
         <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
           <div>
-            <span class="font-display font-extrabold text-xl text-ink">The Iggy Haven</span>
-            <p class="text-ink-soft text-sm mt-3">Pet boarding in Minehead, Somerset. A safe, homely stay for your pets.</p>
+            <span class="font-display font-extrabold text-xl text-white">The Iggy Haven</span>
+            <p class="text-white/50 text-sm mt-3">Dog boarding in Minehead, Somerset. A safe, homely stay for your dog.</p>
           </div>
           <div>
-            <h4 class="font-display font-bold text-sm text-ink mb-4 uppercase tracking-wider">Pages</h4>
+            <h4 class="font-display font-bold text-sm text-white mb-4 uppercase tracking-wider">Pages</h4>
             <ul class="space-y-2">
               {nav.map(n => (
-                <li><a href={n.href} class="text-sm text-ink-soft hover:text-brand-accent transition-colors">{n.label}</a></li>
+                <li><a href={n.href} class="text-sm text-white/50 hover:text-white transition-colors">{n.label}</a></li>
               ))}
             </ul>
           </div>
           <div>
-            <h4 class="font-display font-bold text-sm text-ink mb-4 uppercase tracking-wider">Contact</h4>
-            <p class="text-sm text-ink-soft">
-              <a href={phoneHref} class="hover:text-brand-accent transition-colors">{phone}</a>
+            <h4 class="font-display font-bold text-sm text-white mb-4 uppercase tracking-wider">Contact</h4>
+            <p class="text-sm text-white/50">
+              <a href={phoneHref} class="hover:text-white transition-colors">{phone}</a>
             </p>
-            <p class="text-sm text-ink-soft mt-2">13 Regents Way<br />Minehead<br />Somerset</p>
+            <p class="text-sm text-white/50 mt-2">13 Regents Way<br />Minehead<br />Somerset</p>
           </div>
         </div>
-        <div class="mt-8 pt-6 border-t border-border">
-          <p class="text-ink-whisper text-xs">&copy; 2026 The Iggy Haven. All rights reserved.</p>
+        <div class="mt-8 pt-6 border-t border-white/10">
+          <p class="text-white/30 text-xs">&copy; 2026 The Iggy Haven. All rights reserved.</p>
         </div>
       </div>
     </footer>
