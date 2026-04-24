@@ -2,7 +2,8 @@
 import '../styles/site.css';
 const phone = '01643 707182';
 const phoneHref = 'tel:+441643707182';
-const mapsQuery = encodeURIComponent('13 Regents Way, Minehead, Somerset');
+const email = 'angela.cobban@btinternet.com';
+const mapsQuery = encodeURIComponent('13 Regents Way, Minehead, Somerset TA24 5HW');
 ---
 
 <!doctype html>
@@ -10,7 +11,7 @@ const mapsQuery = encodeURIComponent('13 Regents Way, Minehead, Somerset');
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>The Iggy Haven | Dog Boarding in Minehead, Somerset</title>
+    <title>The Iggy Haven | Dog Home Boarding in Minehead, Somerset</title>
     <meta name="robots" content="noindex, nofollow" />
     <link rel="preload" href="/P2339/fonts/nunito-latin.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="preload" href="/P2339/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin />
@@ -39,10 +40,11 @@ const mapsQuery = encodeURIComponent('13 Regents Way, Minehead, Somerset');
           <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
         </button>
         <nav class="hidden md:flex items-center gap-6">
-          <a href="/P2339" class="text-sm font-semibold text-brand-accent transition-colors">Home</a>
-          <a href="/P2339/services" class="text-sm font-semibold text-ink-soft hover:text-brand-accent transition-colors">Services</a>
-          <a href="/P2339/gallery" class="text-sm font-semibold text-ink-soft hover:text-brand-accent transition-colors">Gallery</a>
-          <a href="/P2339/contact" class="text-sm font-semibold text-ink-soft hover:text-brand-accent transition-colors">Contact</a>
+          <a href="/P2339" class="text-sm font-semibold text-brand-accent">Home</a>
+          <a href="/P2339/about-us" class="text-sm font-semibold text-ink-soft hover:text-brand-accent transition-colors">About Us</a>
+          <a href="/P2339/prices" class="text-sm font-semibold text-ink-soft hover:text-brand-accent transition-colors">Prices</a>
+          <a href="/P2339/reviews" class="text-sm font-semibold text-ink-soft hover:text-brand-accent transition-colors">Reviews</a>
+          <a href="/P2339/registration" class="text-sm font-semibold text-ink-soft hover:text-brand-accent transition-colors">Registration</a>
           <a href={phoneHref} class="inline-flex items-center px-5 py-2 bg-brand-accent text-white font-display font-bold text-sm rounded hover:bg-brand-accent-deep transition-colors">
             {phone}
           </a>
@@ -50,9 +52,11 @@ const mapsQuery = encodeURIComponent('13 Regents Way, Minehead, Somerset');
       </div>
       <nav id="mobile-nav" class="hidden md:hidden px-6 pb-5 pt-4 space-y-3 border-t border-border">
         <a href="/P2339" class="block text-ink font-semibold text-sm">Home</a>
-        <a href="/P2339/services" class="block text-ink-soft font-semibold text-sm hover:text-brand-accent">Services</a>
-        <a href="/P2339/gallery" class="block text-ink-soft font-semibold text-sm hover:text-brand-accent">Gallery</a>
-        <a href="/P2339/contact" class="block text-ink-soft font-semibold text-sm hover:text-brand-accent">Contact</a>
+        <a href="/P2339/about-us" class="block text-ink-soft font-semibold text-sm hover:text-brand-accent">About Us</a>
+        <a href="/P2339/prices" class="block text-ink-soft font-semibold text-sm hover:text-brand-accent">Prices</a>
+        <a href="/P2339/reviews" class="block text-ink-soft font-semibold text-sm hover:text-brand-accent">Reviews</a>
+        <a href="/P2339/registration" class="block text-ink-soft font-semibold text-sm hover:text-brand-accent">Registration</a>
+        <a href="/P2339/terms" class="block text-ink-soft font-semibold text-sm hover:text-brand-accent">Terms</a>
         <a href={phoneHref} class="block px-5 py-2.5 bg-brand-accent text-white font-display font-bold text-sm rounded text-center hover:bg-brand-accent-deep transition-colors">
           {phone}
         </a>
@@ -62,7 +66,7 @@ const mapsQuery = encodeURIComponent('13 Regents Way, Minehead, Somerset');
     <!-- Hero: split layout (brand-secondary blue + portrait photos) -->
     <section class="min-h-[60vh] sm:min-h-[80vh] flex flex-col lg:flex-row overflow-hidden">
       <!-- Text side -->
-      <div class="bg-brand-hero flex-1 flex items-center px-8 sm:px-12 lg:px-16 py-16 lg:py-0">
+      <div class="bg-brand-secondary flex-1 flex items-center px-8 sm:px-12 lg:px-16 py-16 lg:py-0">
         <div class="max-w-xl">
           <p class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-sm font-semibold mb-6 bg-white/15 text-white border border-white/20">
             📍 Minehead, Somerset
@@ -77,15 +81,15 @@ const mapsQuery = encodeURIComponent('13 Regents Way, Minehead, Somerset');
             <a href={phoneHref} class="inline-flex items-center px-6 py-3 sm:px-8 sm:py-4 bg-brand-accent text-white font-display font-bold text-base rounded-xl hover:bg-brand-accent-deep transition-colors shadow-lg">
               📞 Call us: {phone}
             </a>
-            <a href="/P2339/services" class="inline-flex items-center px-6 py-3 sm:px-8 sm:py-4 border-2 border-white text-white font-display font-bold text-base rounded-xl hover:bg-white/10 transition-colors">
-              Our services
+            <a href="/P2339/prices" class="inline-flex items-center px-6 py-3 sm:px-8 sm:py-4 border-2 border-white text-white font-display font-bold text-base rounded-xl hover:bg-white/10 transition-colors">
+              Our prices
             </a>
           </div>
         </div>
       </div>
       <!-- Portrait photos side -->
       <div class="bg-brand-secondary flex items-end justify-center gap-4 px-8 py-10 lg:py-0 lg:w-80 xl:w-96 lg:items-stretch">
-        <div class="w-32 h-72 lg:h-auto lg:flex-1 overflow-hidden rounded-2xl shadow-2xl self-start mt-8 lg:mt-12 lg:mb-0">
+        <div class="w-32 h-72 lg:h-auto lg:flex-1 overflow-hidden rounded-2xl shadow-2xl self-start mt-8 lg:mt-12">
           <img
             src="/P2339/images/angleft.jpg"
             alt="One of our Italian Greyhounds at The Iggy Haven"
@@ -93,7 +97,7 @@ const mapsQuery = encodeURIComponent('13 Regents Way, Minehead, Somerset');
             class="w-full h-full object-cover object-top"
           />
         </div>
-        <div class="w-32 h-72 lg:h-auto lg:flex-1 overflow-hidden rounded-2xl shadow-2xl self-end mb-8 lg:mt-0 lg:mb-12">
+        <div class="w-32 h-72 lg:h-auto lg:flex-1 overflow-hidden rounded-2xl shadow-2xl self-end mb-8 lg:mb-12">
           <img
             src="/P2339/images/angelright.jpg"
             alt="Another of our Italian Greyhounds at The Iggy Haven"
@@ -105,9 +109,9 @@ const mapsQuery = encodeURIComponent('13 Regents Way, Minehead, Somerset');
     </section>
 
     <!-- Trust strip -->
-    <section class="bg-cream-dark border-y border-border py-6">
+    <section class="bg-cream border-y border-border py-6">
       <div class="mx-auto max-w-7xl px-6">
-        <div class="flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-12">
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-12 flex-wrap">
           <div class="flex items-center gap-3">
             <img
               src="/P2339/images/5stars.jpg"
@@ -122,12 +126,17 @@ const mapsQuery = encodeURIComponent('13 Regents Way, Minehead, Somerset');
           <div class="hidden sm:block w-px h-8 bg-border"></div>
           <div class="flex items-center gap-2 text-ink-soft text-sm">
             <span aria-hidden="true">🏛️</span>
-            <span>Licensed by local authority &middot; Ref: LN/6364</span>
+            <span>Licensed &middot; Ref: LN/6364</span>
           </div>
           <div class="hidden sm:block w-px h-8 bg-border"></div>
           <div class="flex items-center gap-2 text-ink-soft text-sm">
             <span aria-hidden="true">🛡️</span>
             <span>Fully insured for public liability</span>
+          </div>
+          <div class="hidden sm:block w-px h-8 bg-border"></div>
+          <div class="flex items-center gap-2 text-ink-soft text-sm">
+            <span aria-hidden="true">👥</span>
+            <span>2 adults, no children</span>
           </div>
         </div>
       </div>
@@ -139,145 +148,158 @@ const mapsQuery = encodeURIComponent('13 Regents Way, Minehead, Somerset');
         <div class="text-center mb-12">
           <h2 class="font-display font-extrabold text-3xl sm:text-4xl text-ink mb-4">What we offer</h2>
           <p class="text-ink-soft text-lg max-w-2xl mx-auto">
-            We offer flexible day and overnight stays for up to 4 small or medium sized dogs in our home, alongside our rescue Italian Greyhounds and a Whippet. There are 2 adults here and no children.
+            We offer flexible day and overnight stays for up to 4 small or medium sized dogs in our home, with our rescue Italian Greyhounds and a Whippet.
           </p>
         </div>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           <div class="bg-white rounded-2xl p-7 shadow-sm border border-border">
             <div class="w-12 h-12 rounded-xl bg-accent-light flex items-center justify-center text-2xl mb-5">🏠</div>
             <h3 class="font-display font-bold text-xl text-ink mb-3">Our home, not a kennels</h3>
-            <p class="text-ink-soft text-sm leading-relaxed">Your dog stays in our warm, secure family home rather than a commercial kennel. They settle in with the household and begin to feel at home straight away.</p>
+            <p class="text-ink-soft text-sm leading-relaxed">Your dog stays in our warm, secure family home, not a commercial kennel. They settle in with the household and begin to feel at home straight away.</p>
           </div>
           <div class="bg-white rounded-2xl p-7 shadow-sm border border-border">
             <div class="w-12 h-12 rounded-xl bg-accent-light flex items-center justify-center text-2xl mb-5">👥</div>
             <h3 class="font-display font-bold text-xl text-ink mb-3">24-hour attendance</h3>
-            <p class="text-ink-soft text-sm leading-relaxed">Two genuine and very experienced dog lovers in attendance around the clock. Your dog is never left alone and always has company throughout their stay.</p>
+            <p class="text-ink-soft text-sm leading-relaxed">Two genuine and very experienced dog lovers in attendance around the clock. Your dog is never left alone at any time throughout their stay.</p>
           </div>
           <div class="bg-white rounded-2xl p-7 shadow-sm border border-border">
             <div class="w-12 h-12 rounded-xl bg-accent-light flex items-center justify-center text-2xl mb-5">📺</div>
             <h3 class="font-display font-bold text-xl text-ink mb-3">Dog's own TV room</h3>
-            <p class="text-ink-soft text-sm leading-relaxed">Your dog has access to their own TV room with a view of the garden, plus a lovely sunny courtyard garden to relax in during the day.</p>
+            <p class="text-ink-soft text-sm leading-relaxed">Your dog has access to their own TV room with a view of the garden, plus a lovely sunny courtyard garden to relax in throughout the day.</p>
           </div>
           <div class="bg-white rounded-2xl p-7 shadow-sm border border-border">
             <div class="w-12 h-12 rounded-xl bg-accent-light flex items-center justify-center text-2xl mb-5">🌿</div>
             <h3 class="font-display font-bold text-xl text-ink mb-3">Nature walks on Exmoor</h3>
-            <p class="text-ink-soft text-sm leading-relaxed">Optional guided walks on the beautiful Exmoor. All dogs are exercised on the lead and wear coats or harnesses at all times while outside.</p>
+            <p class="text-ink-soft text-sm leading-relaxed">Optional guided walks on the beautiful Exmoor. All dogs are exercised on the lead with coats or harnesses at all times while outside.</p>
           </div>
           <div class="bg-white rounded-2xl p-7 shadow-sm border border-border">
             <div class="w-12 h-12 rounded-xl bg-accent-light flex items-center justify-center text-2xl mb-5">🛏️</div>
             <h3 class="font-display font-bold text-xl text-ink mb-3">Flexible sleeping arrangements</h3>
-            <p class="text-ink-soft text-sm leading-relaxed">We work around whatever your dog is used to at home. Tell us their routine and we will match it throughout their stay.</p>
+            <p class="text-ink-soft text-sm leading-relaxed">Whatever your pet is used to, we work around it. Tell us their routine and we will match it throughout their stay with us.</p>
           </div>
           <div class="bg-white rounded-2xl p-7 shadow-sm border border-border">
             <div class="w-12 h-12 rounded-xl bg-accent-light flex items-center justify-center text-2xl mb-5">🍽️</div>
             <h3 class="font-display font-bold text-xl text-ink mb-3">Self-catering meals</h3>
-            <p class="text-ink-soft text-sm leading-relaxed">We use your dog's own food to avoid tummy upsets from a sudden change in diet. Just bring enough for their stay and we take care of the rest.</p>
+            <p class="text-ink-soft text-sm leading-relaxed">We use your dog's own food to avoid tummy upsets. Just bring enough for their stay and we handle all the rest with care.</p>
           </div>
         </div>
+
+        <!-- Additional services -->
+        <div class="mt-10 grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <div class="bg-white rounded-2xl p-7 shadow-sm border border-border">
+            <div class="w-12 h-12 rounded-xl bg-accent-light flex items-center justify-center text-2xl mb-5">🚐</div>
+            <h3 class="font-display font-bold text-xl text-ink mb-3">Shuttle service available</h3>
+            <p class="text-ink-soft text-sm leading-relaxed">We can collect from Taunton or your hotel by prior arrangement. We are also within reach of Bristol Airport (52 miles) and Exeter Airport (46 miles).</p>
+          </div>
+          <div class="bg-white rounded-2xl p-7 shadow-sm border border-border">
+            <div class="w-12 h-12 rounded-xl bg-accent-light flex items-center justify-center text-2xl mb-5">🏷️</div>
+            <h3 class="font-display font-bold text-xl text-ink mb-3">Identity tags provided</h3>
+            <p class="text-ink-soft text-sm leading-relaxed">For your dog's safety, we provide identity tags for The Iggy Haven to go on their house collar or martingale for the duration of their stay.</p>
+          </div>
+        </div>
+
         <div class="mt-10 text-center">
-          <a href="/P2339/services" class="inline-flex items-center px-8 py-4 bg-brand-accent text-white font-display font-bold text-base rounded-xl hover:bg-brand-accent-deep transition-colors shadow-md">
-            View all services &amp; pricing
+          <a href="/P2339/prices" class="inline-flex items-center px-8 py-4 bg-brand-accent text-white font-display font-bold text-base rounded-xl hover:bg-brand-accent-deep transition-colors shadow-md">
+            View all prices
           </a>
         </div>
       </div>
     </section>
 
-    <!-- About Us -->
-    <section id="about" class="bg-cream py-16 sm:py-24">
-      <div class="mx-auto max-w-7xl px-6">
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-          <div>
-            <h2 class="font-display font-extrabold text-3xl sm:text-4xl text-ink mb-6">About us</h2>
-            <div class="space-y-4 text-ink-soft leading-relaxed">
-              <p>
-                The Iggy Haven is run by Angela Cobban, licensed by Somerset Council (Licence ref: LN/6364) to board up to four small and medium dogs at a time in our family home in Minehead.
-              </p>
-              <p>
-                We share our home with our own rescue Italian Greyhounds and a Whippet, so your dog will always have canine company. There are two adults here and no children, making for a calm, settled environment.
-              </p>
-              <p>
-                We are insured for public liability and fully licensed with the local authority. We take our guests on walks in the local area and on Exmoor, and we make sure every dog has their own space to relax.
-              </p>
-            </div>
-            <div class="mt-8 flex items-center gap-4 p-5 bg-white rounded-xl border border-border shadow-sm">
-              <div class="w-14 h-14 rounded-full bg-brand-accent flex items-center justify-center text-white font-display font-extrabold text-xl shrink-0">A</div>
-              <div>
-                <p class="font-display font-bold text-ink">Angela Cobban</p>
-                <p class="text-ink-soft text-sm">Licensee &middot; The Iggy Haven &middot; Minehead</p>
-                <p class="text-ink-whisper text-xs">Licence reference: LN/6364</p>
-              </div>
-            </div>
+    <!-- Pricing summary -->
+    <section class="bg-cream py-16 sm:py-24">
+      <div class="mx-auto max-w-5xl px-6">
+        <div class="text-center mb-12">
+          <h2 class="font-display font-extrabold text-3xl sm:text-4xl text-ink mb-4">Our prices</h2>
+          <p class="text-ink-soft text-lg max-w-xl mx-auto">The pricing structure is extremely simple.</p>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
+          <div class="bg-white rounded-2xl p-8 shadow-sm border border-border text-center">
+            <div class="text-4xl mb-4" aria-hidden="true">☀️</div>
+            <h3 class="font-display font-bold text-xl text-ink mb-2">Day Care</h3>
+            <p class="font-display font-extrabold text-4xl text-brand-accent mb-3">&pound;30<span class="text-lg text-ink-soft font-normal">/dog/day</span></p>
+            <p class="text-ink-soft text-sm">Dogs can arrive any time after 7.30am and be collected up to 6.30pm. Regular walks included.</p>
           </div>
-          <div class="flex justify-center gap-5">
-            <div class="w-36 sm:w-44 h-80 sm:h-96 overflow-hidden rounded-2xl shadow-xl border-2 border-border">
-              <img
-                src="/P2339/images/angleft.jpg"
-                alt="One of our Italian Greyhounds at The Iggy Haven"
-                loading="lazy"
-                class="w-full h-full object-cover object-top"
-              />
-            </div>
-            <div class="w-36 sm:w-44 h-80 sm:h-96 overflow-hidden rounded-2xl shadow-xl border-2 border-border mt-10">
-              <img
-                src="/P2339/images/angelright.jpg"
-                alt="Another of our Italian Greyhounds at The Iggy Haven"
-                loading="lazy"
-                class="w-full h-full object-cover object-top"
-              />
-            </div>
+          <div class="bg-white rounded-2xl p-8 shadow-sm border-2 border-brand-accent text-center relative">
+            <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-brand-accent text-white text-xs font-bold px-3 py-1 rounded-full">Overnight</div>
+            <div class="text-4xl mb-4" aria-hidden="true">🌙</div>
+            <h3 class="font-display font-bold text-xl text-ink mb-2">Overnight Stay</h3>
+            <p class="font-display font-extrabold text-4xl text-brand-accent mb-3">&pound;35<span class="text-lg text-ink-soft font-normal">/dog/day</span></p>
+            <p class="text-ink-soft text-sm">Charged per day, not per night. A Saturday to Saturday stay is charged for 8 days.</p>
           </div>
+        </div>
+        <div class="bg-white rounded-2xl p-6 border border-border shadow-sm space-y-3 mb-8">
+          <div class="flex items-start gap-3">
+            <span class="text-brand-accent font-bold">+</span>
+            <p class="text-ink-soft text-sm"><strong class="text-ink">Bank holiday surcharge:</strong> An additional &pound;10.00 per dog per day applies on Christmas Eve, Christmas Day, Boxing Day, New Year's Day and New Year's Eve.</p>
+          </div>
+          <div class="flex items-start gap-3">
+            <span class="text-brand-accent font-bold">+</span>
+            <p class="text-ink-soft text-sm"><strong class="text-ink">Pet transport:</strong> 45p per mile. Soft crates are used for safety reasons while travelling.</p>
+          </div>
+          <div class="flex items-start gap-3">
+            <span class="text-brand-accent font-bold">+</span>
+            <p class="text-ink-soft text-sm"><strong class="text-ink">Deposit to secure a booking:</strong> 50% (or &pound;20 if you prefer), balance due on arrival. Deposits are non-refundable unless cancellation is notified 7 days in advance.</p>
+          </div>
+        </div>
+        <div class="text-center">
+          <a href="/P2339/prices" class="inline-flex items-center px-8 py-4 bg-brand-accent text-white font-display font-bold text-base rounded-xl hover:bg-brand-accent-deep transition-colors">
+            Full pricing details
+          </a>
         </div>
       </div>
     </section>
 
-    <!-- Getting here + Rates -->
+    <!-- Reviews -->
     <section class="bg-brand-bg py-16 sm:py-24">
       <div class="mx-auto max-w-7xl px-6">
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-          <div>
-            <h2 class="font-display font-extrabold text-3xl sm:text-4xl text-ink mb-6">Getting to us</h2>
-            <p class="text-ink-soft mb-8 leading-relaxed">
-              We are based in Minehead in Somerset, within easy reach of two international airports. We can also arrange a shuttle service if you need it.
-            </p>
-            <div class="space-y-4">
-              <div class="flex items-start gap-4 bg-white rounded-xl p-5 border border-border shadow-sm">
-                <span class="text-2xl shrink-0" aria-hidden="true">✈️</span>
-                <div>
-                  <p class="font-display font-bold text-ink">Bristol Airport</p>
-                  <p class="text-ink-soft text-sm">52 miles from Minehead</p>
-                </div>
-              </div>
-              <div class="flex items-start gap-4 bg-white rounded-xl p-5 border border-border shadow-sm">
-                <span class="text-2xl shrink-0" aria-hidden="true">✈️</span>
-                <div>
-                  <p class="font-display font-bold text-ink">Exeter Airport</p>
-                  <p class="text-ink-soft text-sm">46 miles from Minehead</p>
-                </div>
-              </div>
-              <div class="flex items-start gap-4 bg-white rounded-xl p-5 border border-border shadow-sm">
-                <span class="text-2xl shrink-0" aria-hidden="true">🚐</span>
-                <div>
-                  <p class="font-display font-bold text-ink">Shuttle service available</p>
-                  <p class="text-ink-soft text-sm">We can collect from Taunton or your hotel by prior arrangement. The journey can be shortened if we meet you partway.</p>
-                </div>
+        <div class="text-center mb-12">
+          <h2 class="font-display font-extrabold text-3xl sm:text-4xl text-ink mb-4">Reviews from happy doggy boarders</h2>
+        </div>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
+          <div class="bg-white rounded-2xl p-8 shadow-sm border border-border">
+            <div class="flex items-center gap-3 mb-5">
+              <img src="/P2339/images/korkeyphena.jpg" alt="Korky and Phena, two whippets who stayed at The Iggy Haven" width="60" height="60" loading="lazy" class="w-16 h-16 rounded-full object-cover border-2 border-border" />
+              <div>
+                <p class="font-display font-bold text-ink text-sm">Elizabeth &amp; David Johnstone</p>
+                <p class="text-ink-soft text-xs">Dunster</p>
               </div>
             </div>
+            <blockquote class="text-ink-soft text-sm leading-relaxed italic">
+              "We are delighted to have discovered Iggy Haven Boarding Kennels. We made a preliminary visit with our two whippets Korky and Phena and were impressed with the very dog-friendly, caring environment. Angela &amp; Ernie's obvious love of dogs and concern for their health, happiness and well being was evident. We felt confident when we left the dogs in their care, knowing that they would be safe and treated with kindness: Whippets are very sensitive and Iggy Haven is ideal for them. The property is adapted completely to ensure the dogs feel at home, either in their own room or, when appropriate, with other dogs in the house. We would highly recommend Iggy Haven and we intend to make this Korky &amp; Phena's regular 'holiday home'."
+            </blockquote>
           </div>
-          <div>
-            <h2 class="font-display font-extrabold text-3xl sm:text-4xl text-ink mb-6">Our rates</h2>
-            <div class="bg-white rounded-2xl p-8 border border-border shadow-sm">
-              <p class="text-ink-soft mb-6 leading-relaxed">We offer affordable rates for both day stays and overnight boarding. We keep our prices competitive while giving your dog the very best care possible.</p>
-              <div class="border-2 border-dashed border-border rounded-xl p-5 bg-brand-bg">
-                <p class="text-ink-whisper italic text-sm">Full pricing details will appear here. Get in touch and we will talk through the options for your dog's stay.</p>
-                <p class="text-ink-whisper text-xs mt-2">We will add your pricing when you get in touch.</p>
+          <div class="space-y-6">
+            <div class="bg-white rounded-2xl p-8 shadow-sm border border-border">
+              <div class="flex items-center gap-3 mb-5">
+                <div class="w-12 h-12 rounded-full bg-brand-accent flex items-center justify-center text-white font-display font-bold text-lg shrink-0">P</div>
+                <div>
+                  <p class="font-display font-bold text-ink text-sm">Tim and Vicky Osborne</p>
+                  <p class="text-ink-soft text-xs">Chippenham</p>
+                </div>
               </div>
-              <div class="mt-6">
-                <a href={phoneHref} class="inline-flex items-center px-6 py-3 bg-brand-accent text-white font-display font-bold text-sm rounded-xl hover:bg-brand-accent-deep transition-colors">
-                  📞 Ask about our rates
-                </a>
+              <blockquote class="text-ink-soft text-sm leading-relaxed italic">
+                "We are always so reassured when Phoebe is with you as we know she is completely happy and totally spoilt."
+              </blockquote>
+            </div>
+            <div class="bg-white rounded-2xl p-8 shadow-sm border border-border">
+              <div class="flex items-center gap-3 mb-5">
+                <div class="w-12 h-12 rounded-full bg-brand-secondary flex items-center justify-center text-white font-display font-bold text-lg shrink-0">M</div>
+                <div>
+                  <p class="font-display font-bold text-ink text-sm">Milo Beagle, aged 5</p>
+                  <p class="text-ink-soft text-xs">Porlock</p>
+                </div>
               </div>
+              <blockquote class="text-ink-soft text-sm leading-relaxed italic">
+                "I stayed with Angela and Ernie when my mummy and daddy went on holiday without me for a couple of days. I liked the back garden very much, especially the greenhouse, and was allowed to lay in the sun as much as I wanted. They gave me treats of liver cake and even gave my mummy the recipe!"
+              </blockquote>
             </div>
           </div>
+        </div>
+        <div class="text-center">
+          <a href="/P2339/reviews" class="inline-flex items-center px-8 py-4 border-2 border-brand-accent text-brand-accent font-display font-bold text-base rounded-xl hover:bg-accent-light transition-colors">
+            Read all reviews
+          </a>
         </div>
       </div>
     </section>
@@ -293,9 +315,7 @@ const mapsQuery = encodeURIComponent('13 Regents Way, Minehead, Somerset');
           <div class="bg-white rounded-2xl p-7 shadow-sm border border-border">
             <div class="w-12 h-12 rounded-xl bg-accent-light flex items-center justify-center text-2xl mb-5">🤝</div>
             <h3 class="font-display font-bold text-xl text-ink mb-3">Pre-familiarisation visit</h3>
-            <p class="text-ink-soft text-sm leading-relaxed">
-              This is essential before your dog's first stay. We need to learn all about your dog, and they need the chance to familiarise themselves with us, our home, and our other dogs so they can begin to feel at home.
-            </p>
+            <p class="text-ink-soft text-sm leading-relaxed">This is essential before your dog's first stay. We need to learn all about your dog, and they need the chance to familiarise themselves with us, our home, and our other dogs so they can begin to feel at home.</p>
           </div>
           <div class="bg-white rounded-2xl p-7 shadow-sm border border-border">
             <div class="w-12 h-12 rounded-xl bg-accent-light flex items-center justify-center text-2xl mb-5">💉</div>
@@ -305,7 +325,7 @@ const mapsQuery = encodeURIComponent('13 Regents Way, Minehead, Somerset');
           <div class="bg-white rounded-2xl p-7 shadow-sm border border-border">
             <div class="w-12 h-12 rounded-xl bg-accent-light flex items-center justify-center text-2xl mb-5">🐕</div>
             <h3 class="font-display font-bold text-xl text-ink mb-3">Lead and coat or harness</h3>
-            <p class="text-ink-soft text-sm leading-relaxed">Dogs will only be exercised on the lead, and coats or harnesses must be worn at all times while outside. Please bring your dog's usual walking kit with them.</p>
+            <p class="text-ink-soft text-sm leading-relaxed">Dogs are only exercised on the lead, and coats or harnesses must be worn at all times while outside. Please bring your dog's usual walking kit with them.</p>
           </div>
           <div class="bg-white rounded-2xl p-7 shadow-sm border border-border">
             <div class="w-12 h-12 rounded-xl bg-accent-light flex items-center justify-center text-2xl mb-5">🏷️</div>
@@ -316,14 +336,14 @@ const mapsQuery = encodeURIComponent('13 Regents Way, Minehead, Somerset');
       </div>
     </section>
 
-    <!-- CTA -->
+    <!-- CTA / Contact -->
     <section class="bg-brand-accent py-16 sm:py-24">
       <div class="mx-auto max-w-7xl px-6">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
           <div>
             <h2 class="font-display font-extrabold text-3xl sm:text-4xl text-white mb-6">Get in touch</h2>
             <p class="text-white/85 mb-8 leading-relaxed">
-              We would love to hear from you. Call us to discuss your dog's needs, arrange a pre-familiarisation visit, or ask about availability. We are based in Minehead, Somerset.
+              You are welcome to ring us to make an appointment for your pre-familiarisation visit, or just to come and get to know us. We look forward to welcoming your pet into our home.
             </p>
             <div class="space-y-4">
               <a href={phoneHref} class="flex items-center gap-4 bg-white/10 rounded-xl p-5 border border-white/20 hover:bg-white/20 transition-colors">
@@ -331,6 +351,14 @@ const mapsQuery = encodeURIComponent('13 Regents Way, Minehead, Somerset');
                 <div>
                   <p class="text-white/70 text-xs font-semibold uppercase tracking-wider mb-0.5">Phone</p>
                   <p class="font-display font-bold text-white text-lg">{phone}</p>
+                  <p class="text-white/60 text-xs">Business hours 7am to 6.30pm</p>
+                </div>
+              </a>
+              <a href={`mailto:${email}`} class="flex items-center gap-4 bg-white/10 rounded-xl p-5 border border-white/20 hover:bg-white/20 transition-colors">
+                <span class="text-2xl shrink-0" aria-hidden="true">✉️</span>
+                <div>
+                  <p class="text-white/70 text-xs font-semibold uppercase tracking-wider mb-0.5">Email</p>
+                  <p class="font-display font-bold text-white">{email}</p>
                 </div>
               </a>
               <div class="flex items-start gap-4 bg-white/10 rounded-xl p-5 border border-white/20">
@@ -338,11 +366,11 @@ const mapsQuery = encodeURIComponent('13 Regents Way, Minehead, Somerset');
                 <div>
                   <p class="text-white/70 text-xs font-semibold uppercase tracking-wider mb-0.5">Address</p>
                   <p class="font-display font-bold text-white">13 Regents Way</p>
-                  <p class="text-white/80">Minehead, Somerset</p>
+                  <p class="text-white/80">Minehead, Somerset TA24 5HW</p>
                 </div>
               </div>
             </div>
-            <div class="mt-8 rounded-2xl overflow-hidden border border-white/20">
+            <div class="mt-6 rounded-2xl overflow-hidden border border-white/20">
               <iframe
                 src={`https://www.google.com/maps?q=${mapsQuery}&output=embed`}
                 width="100%"
@@ -360,41 +388,17 @@ const mapsQuery = encodeURIComponent('13 Regents Way, Minehead, Somerset');
               <input type="hidden" name="siteId" value="P2339" />
               <div>
                 <label class="block text-white/80 text-sm font-semibold mb-2" for="name">Your name</label>
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  required
-                  class="w-full px-4 py-3 rounded-xl bg-white/10 border border-white/20 text-white placeholder-white/40 focus:outline-none focus:border-white/60"
-                  placeholder="Jane Smith"
-                />
+                <input type="text" id="name" name="name" required class="w-full px-4 py-3 rounded-xl bg-white/10 border border-white/20 text-white placeholder-white/40 focus:outline-none focus:border-white/60" placeholder="Jane Smith" />
               </div>
               <div>
-                <label class="block text-white/80 text-sm font-semibold mb-2" for="email">Your email</label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  required
-                  class="w-full px-4 py-3 rounded-xl bg-white/10 border border-white/20 text-white placeholder-white/40 focus:outline-none focus:border-white/60"
-                  placeholder="jane@example.com"
-                />
+                <label class="block text-white/80 text-sm font-semibold mb-2" for="email-field">Your email</label>
+                <input type="email" id="email-field" name="email" required class="w-full px-4 py-3 rounded-xl bg-white/10 border border-white/20 text-white placeholder-white/40 focus:outline-none focus:border-white/60" placeholder="jane@example.com" />
               </div>
               <div>
                 <label class="block text-white/80 text-sm font-semibold mb-2" for="message">Message</label>
-                <textarea
-                  id="message"
-                  name="message"
-                  rows="4"
-                  required
-                  class="w-full px-4 py-3 rounded-xl bg-white/10 border border-white/20 text-white placeholder-white/40 focus:outline-none focus:border-white/60 resize-none"
-                  placeholder="Tell us about your dog and when you need boarding..."
-                ></textarea>
+                <textarea id="message" name="message" rows="4" required class="w-full px-4 py-3 rounded-xl bg-white/10 border border-white/20 text-white placeholder-white/40 focus:outline-none focus:border-white/60 resize-none" placeholder="Tell us about your dog and when you need boarding..."></textarea>
               </div>
-              <button
-                type="submit"
-                class="w-full px-6 py-3 bg-brand-accent-deep text-white font-display font-bold text-base rounded-xl hover:opacity-90 transition-opacity shadow-lg border border-white/20"
-              >
+              <button type="submit" class="w-full px-6 py-3 bg-brand-accent-deep text-white font-display font-bold text-base rounded-xl hover:opacity-90 transition-opacity shadow-lg border border-white/20">
                 Send message
               </button>
             </form>
@@ -411,35 +415,32 @@ const mapsQuery = encodeURIComponent('13 Regents Way, Minehead, Somerset');
             <span class="font-display font-extrabold text-xl text-white">The Iggy Haven</span>
             <p class="text-white/50 text-sm mt-3 leading-relaxed">Dog boarding in Minehead, Somerset. A warm, safe home for your dog while you are away.</p>
             <div class="mt-4">
-              <img
-                src="/P2339/images/5stars.jpg"
-                alt="5 stars awarded by Somerset Council"
-                width="114"
-                height="24"
-                loading="lazy"
-                class="h-5 w-auto opacity-70"
-              />
+              <img src="/P2339/images/5stars.jpg" alt="5 stars awarded by Somerset Council" width="114" height="24" loading="lazy" class="h-5 w-auto opacity-70" />
             </div>
           </div>
           <div>
             <h4 class="font-display font-bold text-sm text-white mb-4 uppercase tracking-wider">Pages</h4>
             <ul class="space-y-2">
               <li><a href="/P2339" class="text-sm text-white/50 hover:text-white transition-colors">Home</a></li>
-              <li><a href="/P2339/services" class="text-sm text-white/50 hover:text-white transition-colors">Services</a></li>
-              <li><a href="/P2339/gallery" class="text-sm text-white/50 hover:text-white transition-colors">Gallery</a></li>
-              <li><a href="/P2339/contact" class="text-sm text-white/50 hover:text-white transition-colors">Contact</a></li>
+              <li><a href="/P2339/about-us" class="text-sm text-white/50 hover:text-white transition-colors">About Us</a></li>
+              <li><a href="/P2339/prices" class="text-sm text-white/50 hover:text-white transition-colors">Prices</a></li>
+              <li><a href="/P2339/reviews" class="text-sm text-white/50 hover:text-white transition-colors">Reviews</a></li>
+              <li><a href="/P2339/registration" class="text-sm text-white/50 hover:text-white transition-colors">Registration</a></li>
+              <li><a href="/P2339/terms" class="text-sm text-white/50 hover:text-white transition-colors">Terms &amp; Conditions</a></li>
+              <li><a href="/P2339/welcome" class="text-sm text-white/50 hover:text-white transition-colors">Welcome</a></li>
             </ul>
           </div>
           <div>
             <h4 class="font-display font-bold text-sm text-white mb-4 uppercase tracking-wider">Contact</h4>
             <a href={phoneHref} class="text-sm text-white/50 hover:text-white transition-colors block">{phone}</a>
-            <p class="text-sm text-white/50 mt-2">13 Regents Way<br />Minehead<br />Somerset</p>
+            <a href={`mailto:${email}`} class="text-sm text-white/50 hover:text-white transition-colors block mt-1">{email}</a>
+            <p class="text-sm text-white/50 mt-2">13 Regents Way<br />Minehead<br />Somerset TA24 5HW</p>
             <p class="text-xs text-white/30 mt-4">Licensee: Angela Cobban<br />Licence ref: LN/6364</p>
           </div>
         </div>
         <div class="mt-8 pt-6 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-3">
           <p class="text-white/30 text-xs">&copy; 2026 The Iggy Haven. All rights reserved.</p>
-          <p class="text-white/20 text-xs">This is a preview site built by <a href="https://biscuitweb.co.uk" class="hover:text-white/50 underline">Biscuit Web</a></p>
+          <p class="text-white/20 text-xs">This is a sample site built by <a href="https://biscuitweb.co.uk" class="hover:text-white/50 underline">Biscuit Web</a></p>
         </div>
       </div>
     </footer>

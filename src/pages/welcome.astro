@@ -1,0 +1,228 @@
+---
+import '../styles/site.css';
+const phone = '01643 707182';
+const phoneHref = 'tel:+441643707182';
+const email = 'angela.cobban@btinternet.com';
+---
+
+<!doctype html>
+<html lang="en-GB">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Welcome | The Iggy Haven | Dog Home Boarding in Minehead</title>
+    <meta name="robots" content="noindex, nofollow" />
+    <link rel="preload" href="/P2339/fonts/nunito-latin.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/P2339/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin />
+  </head>
+  <body>
+
+    <!-- Preview banner -->
+    <div class="bg-brand-accent text-white py-2.5 px-4 text-center text-sm sticky top-0 z-50">
+      <div class="max-w-5xl mx-auto flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-4">
+        <span>Preview redesign for <strong>The Iggy Haven</strong> by <strong>Biscuit Web</strong></span>
+        <a href="https://biscuitweb.co.uk/activate?id=P2339&name=The%20Iggy%20Haven" class="inline-flex items-center px-4 py-1 bg-white text-brand-accent font-bold text-xs rounded-full hover:opacity-80 transition-opacity shrink-0">
+          Like it? Just &pound;20/month
+        </a>
+      </div>
+    </div>
+
+    <!-- Nav -->
+    <header class="bg-white-warm border-b border-border sticky top-10 z-40">
+      <div class="mx-auto max-w-7xl px-6 py-4 flex items-center justify-between">
+        <a href="/P2339" class="font-display font-extrabold text-xl text-ink">The Iggy Haven</a>
+        <button
+          class="md:hidden p-2 text-ink-soft"
+          onclick="document.getElementById('mobile-nav-welcome').classList.toggle('hidden')"
+          aria-label="Open menu"
+        >
+          <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+        </button>
+        <nav class="hidden md:flex items-center gap-6">
+          <a href="/P2339" class="text-sm font-semibold text-ink-soft hover:text-brand-accent transition-colors">Home</a>
+          <a href="/P2339/about-us" class="text-sm font-semibold text-ink-soft hover:text-brand-accent transition-colors">About Us</a>
+          <a href="/P2339/prices" class="text-sm font-semibold text-ink-soft hover:text-brand-accent transition-colors">Prices</a>
+          <a href="/P2339/reviews" class="text-sm font-semibold text-ink-soft hover:text-brand-accent transition-colors">Reviews</a>
+          <a href="/P2339/registration" class="text-sm font-semibold text-ink-soft hover:text-brand-accent transition-colors">Registration</a>
+          <a href={phoneHref} class="inline-flex items-center px-5 py-2 bg-brand-accent text-white font-display font-bold text-sm rounded hover:bg-brand-accent-deep transition-colors">
+            {phone}
+          </a>
+        </nav>
+      </div>
+      <nav id="mobile-nav-welcome" class="hidden md:hidden px-6 pb-5 pt-4 space-y-3 border-t border-border">
+        <a href="/P2339" class="block text-ink-soft font-semibold text-sm hover:text-brand-accent">Home</a>
+        <a href="/P2339/about-us" class="block text-ink-soft font-semibold text-sm hover:text-brand-accent">About Us</a>
+        <a href="/P2339/prices" class="block text-ink-soft font-semibold text-sm hover:text-brand-accent">Prices</a>
+        <a href="/P2339/reviews" class="block text-ink-soft font-semibold text-sm hover:text-brand-accent">Reviews</a>
+        <a href="/P2339/registration" class="block text-ink-soft font-semibold text-sm hover:text-brand-accent">Registration</a>
+        <a href="/P2339/terms" class="block text-ink-soft font-semibold text-sm hover:text-brand-accent">Terms</a>
+        <a href={phoneHref} class="block px-5 py-2.5 bg-brand-accent text-white font-display font-bold text-sm rounded text-center hover:bg-brand-accent-deep transition-colors">
+          {phone}
+        </a>
+      </nav>
+    </header>
+
+    <!-- Welcome hero -->
+    <section class="min-h-[60vh] sm:min-h-[80vh] flex flex-col lg:flex-row overflow-hidden">
+      <div class="bg-brand-secondary flex-1 flex items-center px-8 sm:px-12 lg:px-16 py-16 lg:py-0">
+        <div class="max-w-xl">
+          <p class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-sm font-semibold mb-6 bg-white/15 text-white border border-white/20">
+            📍 Minehead, Somerset
+          </p>
+          <h1 class="font-display font-extrabold text-3xl sm:text-5xl lg:text-6xl text-white leading-tight tracking-tight">
+            Welcome to The Iggy Haven
+          </h1>
+          <p class="mt-5 text-lg sm:text-xl text-white/85 leading-relaxed">
+            Travel on holiday with complete peace of mind, knowing that your dog will have a happy time safe in our care. We offer flexible day and overnight stays for up to 4 small or medium sized dogs in our home in Minehead.
+          </p>
+          <div class="mt-8 flex flex-wrap gap-4">
+            <a href={phoneHref} class="inline-flex items-center px-6 py-3 sm:px-8 sm:py-4 bg-brand-accent text-white font-display font-bold text-base rounded-xl hover:bg-brand-accent-deep transition-colors shadow-lg">
+              📞 Call us: {phone}
+            </a>
+            <a href="/P2339" class="inline-flex items-center px-6 py-3 sm:px-8 sm:py-4 border-2 border-white text-white font-display font-bold text-base rounded-xl hover:bg-white/10 transition-colors">
+              Find out more
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="bg-brand-secondary flex items-end justify-center gap-4 px-8 py-10 lg:py-0 lg:w-80 xl:w-96 lg:items-stretch">
+        <div class="w-32 h-72 lg:h-auto lg:flex-1 overflow-hidden rounded-2xl shadow-2xl self-start mt-8 lg:mt-12">
+          <img
+            src="/P2339/images/angelsleft2.jpg"
+            alt="Italian Greyhound at The Iggy Haven"
+            fetchpriority="high"
+            class="w-full h-full object-cover object-top"
+          />
+        </div>
+        <div class="w-32 h-72 lg:h-auto lg:flex-1 overflow-hidden rounded-2xl shadow-2xl self-end mb-8 lg:mb-12">
+          <img
+            src="/P2339/images/angelsaright2.jpg"
+            alt="Italian Greyhound at The Iggy Haven"
+            fetchpriority="high"
+            class="w-full h-full object-cover object-top"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- Trust strip -->
+    <section class="bg-cream border-y border-border py-6">
+      <div class="mx-auto max-w-7xl px-6">
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-12 flex-wrap">
+          <div class="flex items-center gap-3">
+            <img src="/P2339/images/5stars.jpg" alt="5 stars awarded by Somerset Council" width="114" height="24" loading="lazy" class="h-6 w-auto" />
+            <span class="text-ink font-semibold text-sm">Awarded 5 stars by Somerset Council</span>
+          </div>
+          <div class="hidden sm:block w-px h-8 bg-border"></div>
+          <div class="flex items-center gap-2 text-ink-soft text-sm">
+            <span aria-hidden="true">🏛️</span>
+            <span>Licensed &middot; Ref: LN/6364</span>
+          </div>
+          <div class="hidden sm:block w-px h-8 bg-border"></div>
+          <div class="flex items-center gap-2 text-ink-soft text-sm">
+            <span aria-hidden="true">🛡️</span>
+            <span>Fully insured for public liability</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Main content from scraped data -->
+    <section class="bg-brand-bg py-16 sm:py-24">
+      <div class="mx-auto max-w-5xl px-6">
+        <div class="max-w-3xl mx-auto space-y-8">
+          <div>
+            <h2 class="font-display font-extrabold text-3xl sm:text-4xl text-ink mb-6">The Iggy Haven</h2>
+            <p class="text-ink-soft leading-relaxed mb-4">
+              We offer flexible day and overnight stays for up to 4 small or medium sized dogs in our home, with our rescue Italian Greyhounds and a Whippet. There are 2 adults living here and no children.
+            </p>
+            <p class="text-ink-soft leading-relaxed mb-4">
+              The Iggy Haven is situated in the West Country. Licensee: Angela Cobban. Licence reference no. LN/6364.
+            </p>
+          </div>
+
+          <div>
+            <h3 class="font-display font-bold text-2xl text-ink mb-5">We offer</h3>
+            <ul class="space-y-3">
+              <li class="flex items-start gap-3"><span class="text-brand-accent font-bold mt-0.5">*</span><span class="text-ink-soft">Two genuine and very experienced dog lovers in attendance 24 hours.</span></li>
+              <li class="flex items-start gap-3"><span class="text-brand-accent font-bold mt-0.5">*</span><span class="text-ink-soft">Our home, (NOT a kennels!), which is warm and secure.</span></li>
+              <li class="flex items-start gap-3"><span class="text-brand-accent font-bold mt-0.5">*</span><span class="text-ink-soft">Dog's own TV room with view of the garden.</span></li>
+              <li class="flex items-start gap-3"><span class="text-brand-accent font-bold mt-0.5">*</span><span class="text-ink-soft">A lovely, sunny courtyard garden.</span></li>
+              <li class="flex items-start gap-3"><span class="text-brand-accent font-bold mt-0.5">*</span><span class="text-ink-soft">Nature walks on Exmoor. (Optional)</span></li>
+              <li class="flex items-start gap-3"><span class="text-brand-accent font-bold mt-0.5">*</span><span class="text-ink-soft">Choice of sleeping arrangements. (Whatever your pet is used to.)</span></li>
+              <li class="flex items-start gap-3"><span class="text-brand-accent font-bold mt-0.5">*</span><span class="text-ink-soft">Self-catering to avoid tummy upsets.</span></li>
+              <li class="flex items-start gap-3"><span class="text-brand-accent font-bold mt-0.5">*</span><span class="text-ink-soft">Affordable rates.</span></li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="font-display font-bold text-2xl text-ink mb-5">Plus</h3>
+            <ul class="space-y-3">
+              <li class="flex items-start gap-3"><span class="text-brand-accent font-bold mt-0.5">*</span><span class="text-ink-soft">We can provide a Shuttle service to and from Taunton or your hotel.</span></li>
+              <li class="flex items-start gap-3"><span class="text-brand-accent font-bold mt-0.5">*</span><span class="text-ink-soft">We are insured for public liability and licensed with the local authority.</span></li>
+              <li class="flex items-start gap-3"><span class="text-brand-accent font-bold mt-0.5">*</span><span class="text-ink-soft">We are within reach of International Airports: Minehead to Bristol Airport = 52 miles. Minehead to Exeter Airport = 46 miles.</span></li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="font-display font-bold text-2xl text-ink mb-5">We naturally require</h3>
+            <ul class="space-y-3">
+              <li class="flex items-start gap-3"><span class="text-brand-accent font-bold mt-0.5">*</span><span class="text-ink-soft">A pre-familiarization visit. This is essential, so we can learn all about your dog and he/she can familiarise him or herself with us and our house etc. and begin to feel at home.</span></li>
+              <li class="flex items-start gap-3"><span class="text-brand-accent font-bold mt-0.5">*</span><span class="text-ink-soft">All dogs must be micro-chipped and inoculated.</span></li>
+            </ul>
+          </div>
+
+          <div class="bg-white rounded-2xl p-6 border border-border shadow-sm">
+            <p class="text-ink-soft text-sm leading-relaxed"><strong class="text-ink">Note:</strong> Dogs will only be exercised on the lead and coats/harnesses worn at all times while outside. Identity tags for The Iggy Haven will be provided on house collars/martingales - for safety's sake.</p>
+          </div>
+
+          <div class="flex flex-wrap gap-4 pt-4">
+            <a href="/P2339/reviews" class="inline-flex items-center px-6 py-3 bg-brand-accent text-white font-display font-bold text-base rounded-xl hover:bg-brand-accent-deep transition-colors">
+              Read reviews from happy doggy boarders
+            </a>
+          </div>
+
+          <div class="flex items-center gap-4 p-5 bg-cream rounded-xl border border-border">
+            <img src="/P2339/images/5stars.jpg" alt="5 stars" width="114" height="24" loading="lazy" class="h-6 w-auto" />
+            <span class="text-ink font-semibold text-sm">Awarded 5 stars by Somerset Council</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-ink border-t border-black/20 py-12">
+      <div class="mx-auto max-w-7xl px-6">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+          <div>
+            <span class="font-display font-extrabold text-xl text-white">The Iggy Haven</span>
+            <p class="text-white/50 text-sm mt-3 leading-relaxed">Dog boarding in Minehead, Somerset. A warm, safe home for your dog while you are away.</p>
+          </div>
+          <div>
+            <h4 class="font-display font-bold text-sm text-white mb-4 uppercase tracking-wider">Pages</h4>
+            <ul class="space-y-2">
+              <li><a href="/P2339" class="text-sm text-white/50 hover:text-white transition-colors">Home</a></li>
+              <li><a href="/P2339/about-us" class="text-sm text-white/50 hover:text-white transition-colors">About Us</a></li>
+              <li><a href="/P2339/prices" class="text-sm text-white/50 hover:text-white transition-colors">Prices</a></li>
+              <li><a href="/P2339/reviews" class="text-sm text-white/50 hover:text-white transition-colors">Reviews</a></li>
+              <li><a href="/P2339/registration" class="text-sm text-white/50 hover:text-white transition-colors">Registration</a></li>
+              <li><a href="/P2339/terms" class="text-sm text-white/50 hover:text-white transition-colors">Terms &amp; Conditions</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-display font-bold text-sm text-white mb-4 uppercase tracking-wider">Contact</h4>
+            <a href={phoneHref} class="text-sm text-white/50 hover:text-white transition-colors block">{phone}</a>
+            <a href={`mailto:${email}`} class="text-sm text-white/50 hover:text-white transition-colors block mt-1">{email}</a>
+            <p class="text-sm text-white/50 mt-2">13 Regents Way<br />Minehead, Somerset TA24 5HW</p>
+            <p class="text-xs text-white/30 mt-4">Licensee: Angela Cobban &middot; Licence ref: LN/6364</p>
+          </div>
+        </div>
+        <div class="mt-8 pt-6 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-3">
+          <p class="text-white/30 text-xs">&copy; 2026 The Iggy Haven. All rights reserved.</p>
+          <p class="text-white/20 text-xs">This is a sample site built by <a href="https://biscuitweb.co.uk" class="hover:text-white/50 underline">Biscuit Web</a></p>
+        </div>
+      </div>
+    </footer>
+
+  </body>
+</html>
