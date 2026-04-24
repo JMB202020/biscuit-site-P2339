@@ -2,8 +2,10 @@
 import '../styles/site.css';
 const nav = [
   { label: 'Home',     href: '/P2339' },
-  { label: 'Services', href: '/P2339/services' },
-  { label: 'Gallery',  href: '/P2339/gallery' },
+  { label: 'About Us', href: '/P2339/about-us' },
+  { label: 'Prices',   href: '/P2339/prices' },
+  { label: 'Reviews',  href: '/P2339/reviews' },
+  { label: 'Registration', href: '/P2339/registration' },
   { label: 'Contact',  href: '/P2339/contact' },
 ];
 const phone = '01643 707182';
@@ -149,9 +151,26 @@ const phoneHref = 'tel:+441643707182';
           <h2 class="font-display font-extrabold text-3xl sm:text-4xl text-ink">Pricing</h2>
           <p class="mt-3 text-ink-soft text-lg">Clear, upfront pricing with no hidden costs.</p>
         </div>
-        <div class="border-2 border-dashed border-border rounded-2xl p-10 bg-white text-center">
-          <p class="text-ink-soft italic text-lg">Add your pricing here. For example: overnight rate per dog, weekly rate, day care rate, any additional charges for bank holidays or extra dogs.</p>
-          <p class="text-ink-whisper text-sm mt-4">We will add your pricing when you get in touch.</p>
+        <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          <div class="bg-white rounded-2xl border border-border p-6 text-center">
+            <h3 class="font-display font-bold text-lg text-ink mb-2">Day Care</h3>
+            <p class="font-display font-extrabold text-3xl text-brand-accent">£30</p>
+            <p class="text-ink-soft text-sm mt-1">per dog per day</p>
+          </div>
+          <div class="bg-white rounded-2xl border border-border p-6 text-center">
+            <h3 class="font-display font-bold text-lg text-ink mb-2">Overnight Stay</h3>
+            <p class="font-display font-extrabold text-3xl text-brand-accent">£35</p>
+            <p class="text-ink-soft text-sm mt-1">per dog per day</p>
+          </div>
+          <div class="bg-white rounded-2xl border border-border p-6 text-center">
+            <h3 class="font-display font-bold text-lg text-ink mb-2">Pet Transport</h3>
+            <p class="font-display font-extrabold text-3xl text-brand-accent">45p</p>
+            <p class="text-ink-soft text-sm mt-1">per mile</p>
+          </div>
+        </div>
+        <div class="mt-4 bg-white rounded-xl border border-border p-5">
+          <p class="text-ink-soft text-sm"><strong class="text-ink">Please note:</strong> charges are per day, not per night. For example, Saturday to Saturday is 8 days. Your dog can arrive any time after 7.30am and be picked up by 6.30pm.</p>
+          <p class="text-ink-soft text-sm mt-2"><strong class="text-ink">Bank holidays:</strong> additional £10 per day on Christmas Eve, Christmas Day, Boxing Day, New Year's Eve and New Year's Day.</p>
         </div>
 
         <div class="mt-10 bg-accent-light rounded-2xl p-8 border border-border">
