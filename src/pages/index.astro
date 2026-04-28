@@ -376,7 +376,8 @@ const mapsQuery = encodeURIComponent('13 Regents Way, Minehead, Somerset TA24 5H
           </div>
           <div>
             <h3 class="font-display font-bold text-2xl text-white mb-6">Send us a message</h3>
-            <form action="https://formspree.io/f/mwvaaojq" method="POST" class="space-y-4">
+            <form action="/api/contact" method="POST" class="space-y-4">
+            <input type="hidden" name="_site_id" value="P2339" /><input type="hidden" name="_business_name" value="The Iggy Haven" /><input type="hidden" name="_business_email" value="${email}`}" /><div style="position:absolute;left:-9999px" aria-hidden="true"><input type="text" name="_hp" tabindex="-1" autocomplete="off" /></div>
               <input type="hidden" name="business" value="The Iggy Haven" />
               <input type="hidden" name="siteId" value="P2339" />
               <div>

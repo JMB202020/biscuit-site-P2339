@@ -110,7 +110,8 @@ const address = '13 Regents Way, Minehead';
           <!-- Contact form -->
           <div>
             <h2 class="font-display font-extrabold text-2xl sm:text-3xl text-ink mb-8">Send a message</h2>
-            <form action="https://formspree.io/f/mwvaaojq" method="POST" class="space-y-5">
+            <form action="/api/contact" method="POST" class="space-y-5">
+            <input type="hidden" name="_site_id" value="P2339" /><input type="hidden" name="_business_name" value="The Iggy Haven" /><input type="hidden" name="_business_email" value="${email}`}" /><div style="position:absolute;left:-9999px" aria-hidden="true"><input type="text" name="_hp" tabindex="-1" autocomplete="off" /></div>
               <input type="hidden" name="business_name" value="The Iggy Haven" />
               <input type="hidden" name="site_id" value="P2339" />
 
